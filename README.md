@@ -73,3 +73,11 @@ yarn add --dev babel-plugin-transform-define babel-plugin-minify-dead-code-elimi
 ```
 
 Using these plugins, the test codes section in the implementation file is removed in the production build.
+
+## Sixth: Setup Server
+
+I recently use [`fastify`](https://www.fastify.io/) rather than [`express`](https://expressjs.com/).
+
+```sh
+yarn add fastify
+```
