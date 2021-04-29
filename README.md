@@ -35,3 +35,17 @@ Then,
 ```
 yarn format
 ```
+
+## Fourth: Add Linter
+
+```sh
+yarn add --dev eslint eslint-config-prettier @typescript-eslint/parser @typescript-eslint/eslint-plugin
+touch .eslintrc.json
+```
+
+Configure ESLint as you want, and add script to run ESLint.
+Then,
+
+```
+yarn format
+```
