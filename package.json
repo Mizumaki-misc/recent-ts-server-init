@@ -1,0 +1,7 @@
+{
+  "name": "recent-ts-server-configuration",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Ryota Mizumaki <statham.programming@gmail.com>",
+  "license": "MIT"
+}
