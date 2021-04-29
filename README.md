@@ -17,7 +17,7 @@ Add basic libraries and edit some configs.
 ```sh
 yarn add --dev typescript @babel/cli @babel/core @babel/preset-env @babel/preset-typescript babel-plugin-module-resolver
 npx tsc --init # Create `tsconfig.json` file
-touch babel.config.json
+touch babel.config.js
 ```
 
 I recently use `babel` as the compiler of TypeScript, because I want to use `path.alias`.
@@ -49,3 +49,27 @@ Then,
 ```
 yarn format
 ```
+
+## Fifth: Add Test
+
+```sh
+yarn add --dev jest babel-jest @types/jest
+```
+
+These are all you need to run `jest` on TypeScript project.
+However, sometimes, I prefer writing the test code in the same file as the implementation file.
+
+```sh
+touch jest.config.js
+```
+
+Using [`testRegex`](https://jestjs.io/ja/docs/configuration#testregex-string--arraystring) achives it.
+It can be configured in `jest.config.js`.
+
+Also, I write test code using `if (process.env['NODE_ENV'] === 'test') {`, so dead code elimination is needed.
+
+```sh
+yarn add --dev babel-plugin-transform-define babel-plugin-minify-dead-code-elimination
+```
+
+Using these plugins, the test codes section in the implementation file is removed in the production build.

@@ -1,4 +1,4 @@
-{
+module.exports = {
   "presets": [
     "@babel/preset-typescript",
     [
@@ -19,6 +19,13 @@
           "~": "./src"
         }
       }
-    ]
+    ],
+    [
+      "transform-define",
+      {
+        "process.env.NODE_ENV": process.env.NODE_ENV,
+      }
+    ],
+    "minify-dead-code-elimination"
   ]
 }
