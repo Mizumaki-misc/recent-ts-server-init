@@ -21,3 +21,17 @@ touch babel.config.json
 ```
 
 I recently use `babel` as the compiler of TypeScript, because I want to use `path.alias`.
+
+## Third: Add Formatter
+
+```sh
+yarn add --dev prettier
+touch .prettierrc.js .prettierignore
+```
+
+Configure prettier as you want, and add script to run prettier.
+Then,
+
+```
+yarn format
+```

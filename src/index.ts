@@ -1,3 +1,3 @@
-import { helloWorld } from "~/helloWorld/hell";
+import { helloWorld } from '~/helloWorld/hell';
 
 helloWorld();
