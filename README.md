@@ -81,3 +81,11 @@ I recently use [`fastify`](https://www.fastify.io/) rather than [`express`](http
 ```sh
 yarn add fastify
 ```
+
+## Seventh: Setup Live Reloading or Hot Reload or Hot Module Replacement (HMR)
+
+```sh
+yarn add --dev node-dev concurrently
+```
+
+Use `concurrently` to run watch mode babel and node-dev in parallel.

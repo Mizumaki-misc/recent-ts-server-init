@@ -5,7 +5,9 @@
   "author": "Ryota Mizumaki <statham.programming@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "npm run build && node ./dist/index",
+    "start": "npm run build && concurrently --kill-others-on-fail --names \"babel,server\" --prefix-colors \"yellow,green\" npm:start:babel npm:start:server",
+    "start:babel": "npm run build:babel -- --watch",
+    "start:server": "node-dev ./dist/index",
     "build": "npm run lint:tsc && npm run build:babel",
     "build:babel": "babel ./src --extensions .ts --out-dir ./dist",
     "lint:tsc": "tsc --noEmit",
@@ -30,9 +32,11 @@
     "babel-plugin-minify-dead-code-elimination": "^0.5.1",
     "babel-plugin-module-resolver": "^4.1.0",
     "babel-plugin-transform-define": "^2.0.0",
+    "concurrently": "^6.0.2",
     "eslint": "^7.25.0",
     "eslint-config-prettier": "^8.3.0",
     "jest": "^26.6.3",
+    "node-dev": "^6.7.0",
     "prettier": "^2.2.1",
     "typescript": "^4.2.4"
   }
