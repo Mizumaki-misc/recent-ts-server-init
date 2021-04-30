@@ -89,3 +89,24 @@ yarn add --dev node-dev concurrently
 ```
 
 Use `concurrently` to run watch mode babel and node-dev in parallel.
+
+## Additional: Add Pre-Commit Hooks
+
+```sh
+yarn add --dev husky lint-staged
+npx husky install
+npx husky add .husky/pre-commit "npm run precommit"
+```
+
+https://typicode.github.io/husky/#/?id=install
+
+Then, set upt `precommit` npm script.
+I use `lint-staged` for it, so add `"lint-staged"` section in `package.json`.
+
+```package.json
+"lint-staged": {
+  "src/**/*.{js,ts,jsx,tsx}": ["npm run lint", "npm run format"]
+},
+```
+
+**Please remember that all new member have to run `npx husky install` before start development.**
