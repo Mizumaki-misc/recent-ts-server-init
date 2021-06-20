@@ -2,6 +2,10 @@
 
 The memo for the TypeScript Server Configuration.
 
+If you want to use React as a HTML Template Engine, see this branch.
+
+https://github.com/Mizumaki-misc/recent-ts-server-init/tree/with-react
+
 ## First: Repository Initialization
 
 ```sh
