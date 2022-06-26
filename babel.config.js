@@ -1,31 +1,37 @@
 module.exports = {
-  "presets": [
-    "@babel/preset-typescript",
+  presets: [
+    '@babel/preset-typescript',
     [
-      "@babel/preset-env",
+      '@babel/preset-react',
       {
-        "targets": {
-          "node": "14.15.0"
-        }
-      }
-    ]
+        runtime: 'automatic',
+      },
+    ],
+    [
+      '@babel/preset-env',
+      {
+        targets: {
+          node: '14.15.0',
+        },
+      },
+    ],
   ],
-  "plugins": [
+  plugins: [
     [
-      "module-resolver",
+      'module-resolver',
       {
-        "root": ["./src"],
-        "alias": {
-          "~": "./src"
-        }
-      }
+        root: ['./src'],
+        alias: {
+          '~': './src',
+        },
+      },
     ],
     [
-      "transform-define",
+      'transform-define',
       {
-        "process.env.NODE_ENV": process.env.NODE_ENV,
-      }
+        'process.env.NODE_ENV': process.env.NODE_ENV,
+      },
     ],
-    "minify-dead-code-elimination"
-  ]
-}
+    'minify-dead-code-elimination',
+  ],
+};
